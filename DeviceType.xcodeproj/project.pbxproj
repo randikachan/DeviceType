@@ -14,6 +14,7 @@
 		30C2B0C01D226A0B003DA1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C2B0BE1D226A0B003DA1DF /* LaunchScreen.storyboard */; };
 		30C2B0CA1D226DF0003DA1DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C2B0C91D226DF0003DA1DF /* AppDelegate.m */; };
 		30C2B0D01D227370003DA1DF /* DeviceTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C2B0CF1D227370003DA1DF /* DeviceTypes.m */; };
+		30C2B0D21D227D13003DA1DF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 30C2B0D11D227D13003DA1DF /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		30C2B0C91D226DF0003DA1DF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		30C2B0CE1D227370003DA1DF /* DeviceTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTypes.h; sourceTree = "<group>"; };
 		30C2B0CF1D227370003DA1DF /* DeviceTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTypes.m; sourceTree = "<group>"; };
+		30C2B0D11D227D13003DA1DF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			children = (
 				30C2B0AF1D226A0B003DA1DF /* DeviceType */,
 				30C2B0AE1D226A0B003DA1DF /* Products */,
+				30C2B0D11D227D13003DA1DF /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +178,7 @@
 			files = (
 				30C2B0C01D226A0B003DA1DF /* LaunchScreen.storyboard in Resources */,
 				30C2B0BD1D226A0B003DA1DF /* Assets.xcassets in Resources */,
+				30C2B0D21D227D13003DA1DF /* LICENSE in Resources */,
 				30C2B0BB1D226A0B003DA1DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

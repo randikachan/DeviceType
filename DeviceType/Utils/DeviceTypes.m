@@ -13,6 +13,9 @@
 
 @implementation DeviceTypes
 
+/*
+ * Retrieves back the device name or if not the machine name.
+ */
 + (NSString*)deviceModelName {
     struct utsname systemInfo;
     uname(&systemInfo);
@@ -94,59 +97,74 @@
     return deviceName;
 }
 
+/*
+ * Following method identifies the device based on the devices categorized under the same size of iPhone5.
+ * Ex:- iPhone5, iPhone5S, iPhone5C (currently not added iPhoneSE)
+ */
 + (BOOL)isIPhone5 {
     if (DEVICE_TYPE_NUMBER == 1) {
         return YES;
     }
-    if ([[Config deviceModelName] isEqualToString:@"iPhone 5(GSM)"] ||
-        [[Config deviceModelName] isEqualToString:@"iPhone 5(GSM+CDMA)"] ||
-        [[Config deviceModelName] isEqualToString:@"iPhone 5c(GSM)"] ||
-        [[Config deviceModelName] isEqualToString:@"iPhone 5c(GSM+CDMA)"] ||
-        [[Config deviceModelName] isEqualToString:@"iPhone 5s(GSM)"] ||
-        [[Config deviceModelName] isEqualToString:@"iPhone 5s(GSM+CDMA)"]) {
+    if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5(GSM)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5(GSM+CDMA)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5c(GSM)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5c(GSM+CDMA)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5s(GSM)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5s(GSM+CDMA)"]) {
         return YES;
-    } else if ([[Config deviceModelName] isEqualToString:@"iPhone5,1"] ||
-               [[Config deviceModelName] isEqualToString:@"iPhone5,2"] ||
-               [[Config deviceModelName] isEqualToString:@"iPhone5,3"] ||
-               [[Config deviceModelName] isEqualToString:@"iPhone5,4"] ||
-               [[Config deviceModelName] isEqualToString:@"iPhone6,1"] ||
-               [[Config deviceModelName] isEqualToString:@"iPhone6,2"]) {
+    } else if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,1"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,2"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,3"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,4"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone6,1"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone6,2"]) {
         return YES;
     } else {
         return NO;
     }
 }
 
+/*
+ * Following method identifies the device based on the devices categorized under the same size of iPhone6.
+ * Ex:- iPhone6, iPhone6S
+ */
 + (BOOL)isIPhone6 {
     if (DEVICE_TYPE_NUMBER == 2) {
         return YES;
     }
-    if ([[Config deviceModelName] isEqualToString:@"iPhone 6 (GSM+CDMA)"] ||
-        [[Config deviceModelName] isEqualToString:@"iPhone 6S (GSM+CDMA)"]) {
+    if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6 (GSM+CDMA)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6S (GSM+CDMA)"]) {
         return YES;
-    } else if ([[Config deviceModelName] isEqualToString:@"iPhone7,2"] ||
-               [[Config deviceModelName] isEqualToString:@"iPhone8,1"]) {
+    } else if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone7,2"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone8,1"]) {
         return YES;
     } else {
         return NO;
     }
 }
 
+/*
+ * Following method identifies the device based on the devices categorized under the same size of iPhone6+.
+ * Ex:- iPhone6+, iPhone6S+
+ */
 + (BOOL)isIPhone6Plus {
     if (DEVICE_TYPE_NUMBER == 3) {
         return YES;
     }
-    if ([[Config deviceModelName] isEqualToString:@"iPhone 6+ (GSM+CDMA)"] ||
-        [[Config deviceModelName] isEqualToString:@"iPhone 6S+ (GSM+CDMA)"]) {
+    if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6+ (GSM+CDMA)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6S+ (GSM+CDMA)"]) {
         return YES;
-    } else if ([[Config deviceModelName] isEqualToString:@"iPhone7,1"] ||
-               [[Config deviceModelName] isEqualToString:@"iPhone8,2"]) {
+    } else if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone7,1"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone8,2"]) {
         return YES;
     } else {
         return NO;
     }
 }
 
+/*
+ * Following method distinguishes if the device is an iPad type or not.
+ */
 + (BOOL)isIPad {
     if (DEVICE_TYPE_NUMBER == 4) {
         return YES;
@@ -156,9 +174,9 @@
     NSArray *arrDeviceNames = @[@"iPad", @"iPad 2(WiFi)", @"iPad 2(GSM)", @"iPad 2(CDMA)", @"iPad 2(WiFi Rev A)", @"iPad Mini 1G (WiFi)", @"iPad Mini 1G (GSM)", @"iPad Mini 1G (GSM+CDMA)", @"iPad 3(WiFi)", @"iPad 3(GSM+CDMA)", @"iPad 3(GSM)", @"iPad 4(WiFi)", @"iPad 4(GSM)", @"iPad 4(GSM+CDMA)", @"iPad Air(WiFi)", @"iPad Air(GSM)", @"iPad Air(GSM+CDMA)", @"iPad Air 2 (WiFi)", @"iPad Air 2 (GSM+CDMA)", @"iPad Mini 2G (WiFi)", @"iPad Mini 2G (GSM)", @"iPad Mini 2G (GSM+CDMA)", @"iPad Mini 3G (WiFi)", @"iPad Mini 3G (GSM)", @"iPad Mini 3G (GSM+CDMA)"];
     
     BOOL result = NO;
-    if ([arrDeviceNames containsObject:[Config deviceModelName]]) {
+    if ([arrDeviceNames containsObject:[DeviceTypes deviceModelName]]) {
         result = YES;
-    } else if ([arrMachineNames containsObject:[Config deviceModelName]]) {
+    } else if ([arrMachineNames containsObject:[DeviceTypes deviceModelName]]) {
         result = YES;
     }
     
