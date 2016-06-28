@@ -27,8 +27,8 @@
     
     NSDictionary *commonNamesDictionary =
     @{
-      @"i386":     @"iPhone Simulator",
-      @"x86_64":   @"iPad Simulator",
+      @"i386":     @"i386 Simulator",
+      @"x86_64":   @"x86_64 Simulator",
       
       @"iPhone1,1":    @"iPhone",
       @"iPhone1,2":    @"iPhone 3G",
