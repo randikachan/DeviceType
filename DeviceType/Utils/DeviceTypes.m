@@ -49,6 +49,7 @@
       
       @"iPhone8,1":    @"iPhone 6S (GSM+CDMA)",
       @"iPhone8,2":    @"iPhone 6S+ (GSM+CDMA)",
+      @"iPhone8,4":    @"iPhone SE",
       
       @"iPad1,1":  @"iPad",
       @"iPad2,1":  @"iPad 2(WiFi)",
