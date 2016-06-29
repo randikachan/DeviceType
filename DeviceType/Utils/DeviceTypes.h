@@ -14,9 +14,9 @@
 @interface DeviceTypes : NSObject
 
 + (NSString*)deviceModelName;
-+ (BOOL)isIPhone5;
-+ (BOOL)isIPhone6;
-+ (BOOL)isIPhone6Plus;
++ (BOOL)isIPhone5SizedDevice;
++ (BOOL)isIPhone6SizedDevice;
++ (BOOL)isIPhone6PlusSizedDevice;
 + (BOOL)isIPad;
 
 @end

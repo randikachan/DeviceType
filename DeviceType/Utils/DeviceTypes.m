@@ -99,10 +99,11 @@
 }
 
 /*
- * Following method identifies the device based on the devices categorized under the same size of iPhone5.
- * Ex:- iPhone5, iPhone5S, iPhone5C (currently not added iPhoneSE)
+ * Following method identifies and categorizes the devices with the same screen size of iPhone5.
+ * 1136 x 640 (727,040 total) resolution at 326 ppi, and 4 (3.48 × 1.96) inches.
+ * Ex:- iPhone5, iPhone5S, iPhone5C, iPhone SE
  */
-+ (BOOL)isIPhone5 {
++ (BOOL)isIPhone5SizedDevice {
     if (DEVICE_TYPE_NUMBER == 1) {
         return YES;
     }
@@ -111,14 +112,16 @@
         [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5c(GSM)"] ||
         [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5c(GSM+CDMA)"] ||
         [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5s(GSM)"] ||
-        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5s(GSM+CDMA)"]) {
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5s(GSM+CDMA)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone SE"]) {
         return YES;
     } else if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,1"] ||
                [[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,2"] ||
                [[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,3"] ||
                [[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,4"] ||
                [[DeviceTypes deviceModelName] isEqualToString:@"iPhone6,1"] ||
-               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone6,2"]) {
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone6,2"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone8,4"]) {
         return YES;
     } else {
         return NO;
@@ -127,9 +130,10 @@
 
 /*
  * Following method identifies the device based on the devices categorized under the same size of iPhone6.
+ * 1334 x 750 (1,000,500 total) at 326 ppi, and 4.7 (4.1 × 2.3) inches
  * Ex:- iPhone6, iPhone6S
  */
-+ (BOOL)isIPhone6 {
++ (BOOL)isIPhone6SizedDevice {
     if (DEVICE_TYPE_NUMBER == 2) {
         return YES;
     }
@@ -146,9 +150,10 @@
 
 /*
  * Following method identifies the device based on the devices categorized under the same size of iPhone6+.
+ * 1920 x 1080 (2,073,600 total) resolution at 401 ppi, 5.5 (4.79 × 2.7) inches.
  * Ex:- iPhone6+, iPhone6S+
  */
-+ (BOOL)isIPhone6Plus {
++ (BOOL)isIPhone6PlusSizedDevice {
     if (DEVICE_TYPE_NUMBER == 3) {
         return YES;
     }
@@ -182,6 +187,18 @@
     }
     
     return result;
+}
+
++ (NSString *)getDeviceType {
+    NSString *deviceName = [DeviceTypes deviceModelName];
+    if ([deviceName containsString:@"iPhone"]) {
+        return @"iPhone";
+    } else if ([deviceName containsString:@"iPod"]) {
+        return @"iPod";
+    } else if ([deviceName containsString:@"iPad"]) {
+        return @"iPad";
+    }
+    return @"UNKNOWN";
 }
 
 @end
