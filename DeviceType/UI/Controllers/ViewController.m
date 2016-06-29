@@ -72,6 +72,8 @@
                                   @"result" : [self getYesOrNoString:[DeviceTypes isIPhone6PlusSizedDevice]]},
                                 @{@"call" : @"[DeviceTypes isIPad]",
                                   @"result" : [self getYesOrNoString:[DeviceTypes isIPad]]},
+                                @{@"call" : @"[DeviceTypes getDeviceType]",
+                                  @"result" : [DeviceTypes getDeviceType]},
                                 ];
 }
 

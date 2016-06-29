@@ -18,5 +18,6 @@
 + (BOOL)isIPhone6SizedDevice;
 + (BOOL)isIPhone6PlusSizedDevice;
 + (BOOL)isIPad;
++ (NSString *)getDeviceType;
 
 @end
