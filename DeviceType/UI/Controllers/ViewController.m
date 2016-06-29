@@ -19,27 +19,13 @@
 
 @implementation ViewController
 
+#pragma mark ViewController Life Cycle Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    // initiate datasource for the tableView
     [self initDataSource];
-    NSLog(@"DeviceName: %@", [DeviceTypes deviceModelName]);
-}
-
-- (void)initDataSource {
-    self.arrCallsAndResults = @[
-                                @{@"call" : @"[DeviceTypes deviceModelName]",
-                                  @"result" : [DeviceTypes deviceModelName]},
-                                @{@"call" : @"[DeviceTypes isIPhone5SizedDevice]",
-                                  @"result" : [self getYesOrNoString:[DeviceTypes isIPhone5SizedDevice]]},
-                                @{@"call" : @"[DeviceTypes isIPhone6SizedDevice]",
-                                  @"result" : [self getYesOrNoString:[DeviceTypes isIPhone6SizedDevice]]},
-                                @{@"call" : @"[DeviceTypes isIPhone6PlusSizedDevice]",
-                                  @"result" : [self getYesOrNoString:[DeviceTypes isIPhone6PlusSizedDevice]]},
-                                @{@"call" : @"[DeviceTypes isIPad]",
-                                  @"result" : [self getYesOrNoString:[DeviceTypes isIPad]]},
-                                ];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +60,21 @@
 }
 
 #pragma mark Util methods
+- (void)initDataSource {
+    self.arrCallsAndResults = @[
+                                @{@"call" : @"[DeviceTypes deviceModelName]",
+                                  @"result" : [DeviceTypes deviceModelName]},
+                                @{@"call" : @"[DeviceTypes isIPhone5SizedDevice]",
+                                  @"result" : [self getYesOrNoString:[DeviceTypes isIPhone5SizedDevice]]},
+                                @{@"call" : @"[DeviceTypes isIPhone6SizedDevice]",
+                                  @"result" : [self getYesOrNoString:[DeviceTypes isIPhone6SizedDevice]]},
+                                @{@"call" : @"[DeviceTypes isIPhone6PlusSizedDevice]",
+                                  @"result" : [self getYesOrNoString:[DeviceTypes isIPhone6PlusSizedDevice]]},
+                                @{@"call" : @"[DeviceTypes isIPad]",
+                                  @"result" : [self getYesOrNoString:[DeviceTypes isIPad]]},
+                                ];
+}
+
 - (NSString *) getYesOrNoString:(BOOL)flag {
     return flag ? @"YES" : @"NO";
 }
@@ -87,6 +88,5 @@
                                           ];
     return str;
 }
-
 
 @end
