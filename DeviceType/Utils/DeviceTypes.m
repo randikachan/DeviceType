@@ -189,6 +189,10 @@
     return result;
 }
 
+/*
+ * Simply does the same thing which
+ * [[UIDevice currentDevice] model] does.
+ */
 + (NSString *)getDeviceType {
     NSString *deviceName = [DeviceTypes deviceModelName];
     if ([deviceName containsString:@"iPhone"]) {
@@ -197,7 +201,10 @@
         return @"iPod";
     } else if ([deviceName containsString:@"iPad"]) {
         return @"iPad";
+    } else {
+        return [[UIDevice currentDevice] model];
     }
+    
     return @"UNKNOWN";
 }
 
