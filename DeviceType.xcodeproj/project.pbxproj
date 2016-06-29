@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30B2B9401D239D9B00BC16E4 /* MethodCallResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B2B93F1D239D9B00BC16E4 /* MethodCallResultTableViewCell.m */; };
+		30B2B9421D23D2E200BC16E4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 30B2B9411D23D2E200BC16E4 /* README.md */; };
 		30C2B0B21D226A0B003DA1DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C2B0B11D226A0B003DA1DF /* main.m */; };
 		30C2B0B81D226A0B003DA1DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C2B0B71D226A0B003DA1DF /* ViewController.m */; };
 		30C2B0BB1D226A0B003DA1DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C2B0B91D226A0B003DA1DF /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		30B2B93E1D239D9B00BC16E4 /* MethodCallResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodCallResultTableViewCell.h; sourceTree = "<group>"; };
 		30B2B93F1D239D9B00BC16E4 /* MethodCallResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodCallResultTableViewCell.m; sourceTree = "<group>"; };
+		30B2B9411D23D2E200BC16E4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		30C2B0AD1D226A0B003DA1DF /* DeviceType.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceType.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C2B0B11D226A0B003DA1DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30C2B0B61D226A0B003DA1DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				30C2B0AF1D226A0B003DA1DF /* DeviceType */,
 				30C2B0AE1D226A0B003DA1DF /* Products */,
 				30C2B0D11D227D13003DA1DF /* LICENSE */,
+				30B2B9411D23D2E200BC16E4 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B2B9421D23D2E200BC16E4 /* README.md in Sources */,
 				30B2B9401D239D9B00BC16E4 /* MethodCallResultTableViewCell.m in Sources */,
 				30C2B0B81D226A0B003DA1DF /* ViewController.m in Sources */,
 				30C2B0D01D227370003DA1DF /* DeviceTypes.m in Sources */,
