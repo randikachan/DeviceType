@@ -5,6 +5,7 @@ This is a collection of utility methods which let's identify the device hardware
 
  <p align="center">
   <img src="http://i.imgur.com/S6GM3Ju.jpg?1" width="375" height="667" alt="Real Device iPhone6S"/><br/>
+  <img src="http://i.imgur.com/S6GM3Ju.jpg?1" width="375" height="667" alt="Simulator iPhone6S"/><br/>
   <span> Screenshots of the demo app to show the methods </span>
  </p>
  </p>
