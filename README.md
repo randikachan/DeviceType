@@ -42,8 +42,10 @@ And this utility class also provides the following useful set of methods too.
 + (CGFloat)getDeviceHeight
 ```
 
-#### Note: Don't forget to check out the DeviceType projects "ViewController.h/.m" file simple implementation to get some more ideas.
-
+#### Note:
+    * If you found anything wrong which I have done or may be a bug please help me to improve this codebase.
+    * You can always add up your valuable utility methods to this class which is related to device types.
+    * Don't forget to check out the DeviceType projects "ViewController.h/.m" file simple implementation to get some more ideas.
 
 
 ##License
