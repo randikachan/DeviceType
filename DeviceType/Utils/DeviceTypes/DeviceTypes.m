@@ -218,11 +218,11 @@
     return @"UNKNOWN";
 }
 
-+ (CGFloat) getDeviceWidth {
++ (CGFloat)getDeviceWidth {
     return CGRectGetWidth([[UIScreen mainScreen] bounds]);
 }
 
-+ (CGFloat) getDeviceHeight {
++ (CGFloat)getDeviceHeight {
     return CGRectGetHeight([[UIScreen mainScreen] bounds]);
 }
 
