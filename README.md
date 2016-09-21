@@ -16,12 +16,12 @@ Find the `DeviceTypes` directory within the project folder, and within that ther
 files. So drag and drop that directory into your Project in XCode.
 
 ###### Import the class file as follows<br/>
-```
+```sh
 // within your implementation file (.m) import it as follows
 #import "DeviceTypes.h"
 ```
 ###### Use it as follows<br/>
-```
+```sh
 if ([DeviceTypes isIPhone5SizedDevice]) {
     // Do your required logic relevant to iPhoneSE Size screens or devices (iPhone5, 5S, SE)
 } else if ([DeviceTypes isIPhone6SizedDevice]) {
@@ -33,7 +33,7 @@ if ([DeviceTypes isIPhone5SizedDevice]) {
 }
 ```
 And this utility class also provides the following useful set of methods too.
-```
+```sh
 + (NSString*)deviceModelName
     Retrieves back the device name or if not the machine name.
 + (NSString *)getDeviceType
@@ -43,16 +43,16 @@ And this utility class also provides the following useful set of methods too.
 ```
 
 #### Note:
-    * If you found anything wrong which I have done or may be a bug please help me to improve this codebase.
-    * You can always add up your valuable utility methods to this class which is related to device types.
-    * Don't forget to check out the DeviceType projects "ViewController.h/.m" file simple implementation to get some more ideas.
+    - If you found anything wrong which I have done or may be a bug please help me to improve this codebase.
+    - You can always add up your valuable utility methods to this class which is related to device types.
+    - Don't forget to check out the DeviceType projects "ViewController.h/.m" file simple implementation to get some more ideas.
 
 
 ##License
 This source code is made available under the MIT License.
 
-```
-Copyright (c) 2013 Kasun Randika
+```sh
+Copyright (c) 2016 Kasun Randika
 
 Permission is hereby granted, free of charge, to any person obtaining a copy 
 of this software and associated documentation files (the "Software"), to deal 
