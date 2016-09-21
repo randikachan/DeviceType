@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		30B2B9401D239D9B00BC16E4 /* MethodCallResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B2B93F1D239D9B00BC16E4 /* MethodCallResultTableViewCell.m */; };
-		30B2B9421D23D2E200BC16E4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 30B2B9411D23D2E200BC16E4 /* README.md */; };
 		30C2B0B21D226A0B003DA1DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C2B0B11D226A0B003DA1DF /* main.m */; };
 		30C2B0B81D226A0B003DA1DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C2B0B71D226A0B003DA1DF /* ViewController.m */; };
 		30C2B0BB1D226A0B003DA1DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C2B0B91D226A0B003DA1DF /* Main.storyboard */; };
@@ -206,7 +205,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30B2B9421D23D2E200BC16E4 /* README.md in Sources */,
 				30B2B9401D239D9B00BC16E4 /* MethodCallResultTableViewCell.m in Sources */,
 				30C2B0B81D226A0B003DA1DF /* ViewController.m in Sources */,
 				30C2B0D01D227370003DA1DF /* DeviceTypes.m in Sources */,

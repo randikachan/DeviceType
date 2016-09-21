@@ -74,6 +74,10 @@
                                   @"result" : [self getYesOrNoString:[DeviceTypes isIPad]]},
                                 @{@"call" : @"[DeviceTypes getDeviceType]",
                                   @"result" : [DeviceTypes getDeviceType]},
+                                @{@"call" : @"[DeviceTypes getDeviceWidth]",
+                                  @"result" : [NSString stringWithFormat:@"%f", [DeviceTypes getDeviceWidth]]},
+                                @{@"call" : @"[DeviceTypes getDeviceHeight]",
+                                  @"result" : [NSString stringWithFormat:@"%f", [DeviceTypes getDeviceHeight]]},
                                 ];
 }
 

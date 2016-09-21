@@ -44,12 +44,16 @@
       @"iPhone6,1":    @"iPhone 5s(GSM)",
       @"iPhone6,2":    @"iPhone 5s(GSM+CDMA)",
       
-      @"iPhone7,1":    @"iPhone 6+ (GSM+CDMA)",
-      @"iPhone7,2":    @"iPhone 6 (GSM+CDMA)",
+      @"iPhone7,1":    @"iPhone 6+(GSM+CDMA)",
+      @"iPhone7,2":    @"iPhone 6(GSM+CDMA)",
       
-      @"iPhone8,1":    @"iPhone 6S (GSM+CDMA)",
-      @"iPhone8,2":    @"iPhone 6S+ (GSM+CDMA)",
-      @"iPhone8,4":    @"iPhone SE",
+      @"iPhone8,1":    @"iPhone 6S(GSM+CDMA)",
+      @"iPhone8,2":    @"iPhone 6S+(GSM+CDMA)",
+      @"iPhone8,4":    @"iPhone SE(GSM+CDMA)",
+      @"iPhone9,1":    @"iPhone 7(GSM+CDMA)",
+      @"iPhone9,2":    @"iPhone 7+(GSM+CDMA)",
+      @"iPhone9,3":    @"iPhone 7(GSM+CDMA)",
+      @"iPhone9,4":    @"iPhone 7+(GSM+CDMA)",
       
       @"iPad1,1":  @"iPad",
       @"iPad2,1":  @"iPad 2(WiFi)",
@@ -113,7 +117,7 @@
         [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5c(GSM+CDMA)"] ||
         [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5s(GSM)"] ||
         [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 5s(GSM+CDMA)"] ||
-        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone SE"]) {
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone SE(GSM+CDMA)"]) {
         return YES;
     } else if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,1"] ||
                [[DeviceTypes deviceModelName] isEqualToString:@"iPhone5,2"] ||
@@ -137,11 +141,14 @@
     if (DEVICE_TYPE_NUMBER == 2) {
         return YES;
     }
-    if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6 (GSM+CDMA)"] ||
-        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6S (GSM+CDMA)"]) {
+    if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6(GSM+CDMA)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6S(GSM+CDMA)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 7(GSM+CDMA)"]) {
         return YES;
     } else if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone7,2"] ||
-               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone8,1"]) {
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone8,1"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone9,1"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone9,3"]) {
         return YES;
     } else {
         return NO;
@@ -157,11 +164,14 @@
     if (DEVICE_TYPE_NUMBER == 3) {
         return YES;
     }
-    if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6+ (GSM+CDMA)"] ||
-        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6S+ (GSM+CDMA)"]) {
+    if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6+(GSM+CDMA)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 6S+(GSM+CDMA)"] ||
+        [[DeviceTypes deviceModelName] isEqualToString:@"iPhone 7+(GSM+CDMA)"]) {
         return YES;
     } else if ([[DeviceTypes deviceModelName] isEqualToString:@"iPhone7,1"] ||
-               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone8,2"]) {
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone8,2"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone9,2"] ||
+               [[DeviceTypes deviceModelName] isEqualToString:@"iPhone9,4"]) {
         return YES;
     } else {
         return NO;
@@ -206,6 +216,14 @@
     }
     
     return @"UNKNOWN";
+}
+
++ (CGFloat) getDeviceWidth {
+    return CGRectGetWidth([[UIScreen mainScreen] bounds]);
+}
+
++ (CGFloat) getDeviceHeight {
+    return CGRectGetHeight([[UIScreen mainScreen] bounds]);
 }
 
 @end
