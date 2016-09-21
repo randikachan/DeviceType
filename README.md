@@ -21,7 +21,7 @@ files. So drag and drop that directory into your Project in XCode.
 #import "DeviceTypes.h"
 ```
 ###### Use it as follows<br/>
-```sh
+```
 if ([DeviceTypes isIPhone5SizedDevice]) {
     // Do your required logic relevant to iPhoneSE Size screens or devices (iPhone5, 5S, SE)
 } else if ([DeviceTypes isIPhone6SizedDevice]) {
