@@ -1,7 +1,7 @@
 # DeviceType
 iOS Objective-C minimal class files with some methods, which will be helpful to identify what's the type of the device is, the app is running on.
 
-This is a collection of utility methods which let's identify the device hardware and software related properties.
+This is a collection of utility methods which let's identify the device hardware and software related properties. To write up this and publish I mainly found inspiration via one of the <a href="http://stackoverflow.com/a/38096953/1752988">StackOverflow Q&A</a>, and please consider that there might be similar implementations also.
 
 <p align="center">
 <img src="http://i.imgur.com/KAyOm01.png?1" width="730" height="667" alt="Real Device iPhone6S Vs iPhone6S Simulator"/><br/>
