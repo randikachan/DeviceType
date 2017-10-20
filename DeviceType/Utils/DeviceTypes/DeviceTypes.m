@@ -75,6 +75,12 @@
       @"iPhone9,2":    @"iPhone 7+(GSM+CDMA)",
       @"iPhone9,3":    @"iPhone 7(GSM+CDMA)",
       @"iPhone9,4":    @"iPhone 7+(GSM+CDMA)",
+      @"iPhone10,1":   @"iPhone 8(CDMA)",
+      @"iPhone10,4":   @"iPhone 8(GSM)",
+      @"iPhone10,2":   @"iPhone 8+(CDMA)",
+      @"iPhone10,5":   @"iPhone 8+(GSM)",
+      @"iPhone10,3":   @"iPhone X(CDMA)",
+      @"iPhone10,6":   @"iPhone X(GSM)",
       
       @"iPad1,1":  @"iPad",
       @"iPad2,1":  @"iPad 2(WiFi)",
